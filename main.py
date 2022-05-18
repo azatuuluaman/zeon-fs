@@ -10,8 +10,15 @@ _, command, *args = sys.argv
 # print(*args)
 
 # выбор функционала
+try:
+    arg2 = sys.argv[2]
+except:
+    arg2 = ''
+
+
 if command in commands:
-    commands[command](args)
+
+    commands[command](args, arg2)
 
 else:
     print('fignya')
