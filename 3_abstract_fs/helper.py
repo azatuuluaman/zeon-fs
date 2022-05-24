@@ -25,7 +25,14 @@ def del_file(args, *asd):
 
 
 def get_file(name, path):
-    print('get_file')
+    try:
+        with open(path, 'r') as file_1:
+            with open(name, 'w') as file_2:
+                for i in file_1.readlines():
+                    file_2.writelines(i)
+        return True
+    except:
+        return False
 
 
 commands = {
