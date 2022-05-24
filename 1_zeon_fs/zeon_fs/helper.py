@@ -8,13 +8,13 @@ def init_fs(args, *arg):
     """
     Программа должна создать директорию zeon_fs
     """
-    os.mkdir('zeon_fs')
+    os.mkdir('args')
     print('Директория создалась')
 
 # ИСПРАВИТЬ РАСПОЛОЖЕНИЕ
 def add_file(path, *sad):
     src = f"{path[0]}"
-    dst = '.'
+    dst = '../..'
     shutil.copy(src,dst)
     print(path, 'add')
 
